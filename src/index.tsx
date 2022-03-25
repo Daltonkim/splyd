@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './assets/main.scss'
+import './assets/fonts/montserrat/stylesheet.css'
+import './assets/fonts/oswald/stylesheet.css'
+import 'react-perfect-scrollbar/dist/css/styles.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store, { persistor } from './store/store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App
+      store={store}
+      persistor={persistor} basename={'/'}    />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,53 @@
+.usertable {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0 55px 40px 40px;
+    @media (max-width: 767px) {
+        padding: 0 45px 40px 40px;
+
+    }
+
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    &-actions {
+        i{
+            color: #fff;
+            font-size: 16px;
+            margin-right: 10px;
+            @media (max-width: 767px) {
+                font-size: 10px;
+            }
+        }
+        &-buttons {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            span {
+                border: 1px solid #797c80;
+                display: flex;
+                border-radius: 10px;
+                height: 40px;
+                width: 40px;
+                margin: 0 10px;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    margin: auto;
+                    color: #797c80;
+                    font-size: 18px;
+                    @media (max-width: 767px) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

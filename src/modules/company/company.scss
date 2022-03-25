@@ -1,0 +1,115 @@
+.company {
+    display: block;
+    padding: 20px 0;
+    height: 100%;
+
+    &-table{
+        margin: 0 25px 0 0;
+        @media (max-width: 767px) {
+            margin: 10px 10px;
+        }
+    
+    }
+
+    &-containers {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 30px;
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+            display: block;
+            margin: 20px 10px;
+        }
+
+        &-wrapper {
+            margin: 0 25px 0 0;
+            border-radius: 20px;
+            flex: 1 65%;
+            background-color: #FFFF;
+            @media (max-width: 767px) {
+                margin: 0;
+            }
+    
+            &:nth-child(2){
+                flex: 1 35%;
+
+            }
+        }
+    }
+    &-details{
+        padding: 25px 40px;
+
+        &-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom:2px solid #e2e6e9 ;
+            padding:0 0 20px 0;
+            @media (max-width: 767px) {
+                display: block;
+                padding: 10px 0;
+
+            }
+            &-action{
+                @media (max-width: 767px) {
+                    padding: 10px 0;
+    
+                } 
+            }
+            &-title{
+                display: flex;
+                justify-content: space-between;
+                align-items:center ;
+            }
+            &-initials {
+                background: #e8faf5;
+                padding: 20px;
+                border-radius: 50%;
+                color: #5cd2a1;
+                font-weight: 800;
+                margin-right: 20px;
+                font-size: 23px;
+            }
+        }
+        &-form{
+            padding: 10px 0;
+            &-values{
+                display: flex;
+                justify-content: space-between;
+                @media (max-width: 767px) {
+                    display: block;
+        
+        
+                }
+                &-columns {
+                    &:last-child {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        @media (max-width: 767px) {
+                            align-items: flex-start;
+                            flex-direction: row;
+                        }
+
+                    }
+                    &-rows{
+                        span{
+                            border-radius: 50%;
+                            padding: 20px;
+                            background-color: #f2f5f7;
+                            i{
+                                color: #797c80;
+                                cursor: pointer;
+                                font-size: 16px;
+                            }
+                        }
+
+                    }
+            
+                }
+            }
+        }
+    }
+}
