@@ -1,5 +1,3 @@
-import { Button } from "react-bootstrap"
-
 export const CompanyDetails = () => {
     return (
         <div className="company-details">
