@@ -7,7 +7,7 @@ import { Contact } from "../contact/contact";
 
 export const SideBar = () => {
 
-    const { menuConfig: { header: { items }, aside: { items: asideitem } } } = useSelector((state: RootStateOrAny) => state.builder)
+    const { menuConfig: { header: { items }, } } = useSelector((state: RootStateOrAny) => state.builder)
 
     const perfectScrollbarOptions = {
         wheelSpeed: 2,

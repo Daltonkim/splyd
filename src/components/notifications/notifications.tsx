@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export const Dropdown = ({ icon }) => {
 
 
-    const { menuConfig: { header: { items }, aside: { items: asideitem } } } = useSelector((state: RootStateOrAny) => state.builder)
+    const { menuConfig: { header: { items }} } = useSelector((state: RootStateOrAny) => state.builder)
 
     const [isOpen, setisOpen] = useState(false)
 
