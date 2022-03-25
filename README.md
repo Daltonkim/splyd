@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Splyd Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project![screenshot-localhost_3000-2022 03 25-22_17_15](https://user-images.githubusercontent.com/20104301/160187379-386d90ab-caf3-491f-b6f3-31c6be562881.png)
+ was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and template Typescript.
 
 ## Available Scripts
 
