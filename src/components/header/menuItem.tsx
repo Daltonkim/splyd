@@ -10,7 +10,7 @@ export const MenuItem = injectIntl((props: any) => {
 
     const [active, setActive] = useState(false)
 
-    const { intl, build: { title, page, translate, icon }, } = props
+    const { build: { title, page, icon }, } = props
 
     useEffect(() => {
         const url = location.pathname.split('/')[1];
