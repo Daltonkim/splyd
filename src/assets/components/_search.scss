@@ -3,9 +3,22 @@
     padding: 40px 0;
     justify-content: space-between;
     align-items: center;
+    margin: 0 20px 0 0;
+    @media (max-width: 767px) {
+        display: block;
+        margin: 0;
+    } 
+    &-submit{
+        @media (max-width: 767px) {
+            margin: 20px 0;
+        } 
 
+    }
     &-inputs {
         width: 48%;
+        @media (max-width: 767px) {
+            width: 100%;
+        } 
 
         form {
             border: 1px solid  #797c80;
@@ -15,6 +28,7 @@
             align-items: center;
             border-radius: 10px;
             padding: 4px;
+        
             input {
                 padding: 18px;
                 border-radius: 20px;

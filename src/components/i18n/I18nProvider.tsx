@@ -19,7 +19,6 @@ export default function I18nProvider({ children }) {
     const locale = useSelector((state: RootStateOrAny) => state.i18n.lang) || 'en'; //add default locale if not present in redux store yet.
 
     const translations = allTranslations[locale];
-    console.log(translations)
 
     return (
         <IntlProvider locale={locale} messages={translations}>

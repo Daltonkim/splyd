@@ -7,17 +7,47 @@
     border-bottom: 2px solid #e2e6e9;
 
     &-name {
-        
+
+
         h1 {
             font-size: 30px;
+
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
         }
 
         p {
             font-size: 20px;
+
+            @media (max-width: 767px) {
+                font-size: 14px;
+            }
         }
     }
-    &-quicklinks{
+
+    &-quicklinks {
         display: flex;
-        justify-content:right;
+        justify-content: right;
+
+        .dropdown {
+            &:last-child {
+                @media (min-width: 767px) {
+                    display: none;
+                }
+            }
+
+            .dropdown-toggle {
+                @media (max-width: 767px) {
+                    padding: 5px;
+                }
+
+                i {
+                    @media (max-width: 767px) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
     }
 }

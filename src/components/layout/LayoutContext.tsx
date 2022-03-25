@@ -80,7 +80,6 @@ function findPageConfig(currentPage, items, breadcrumbs:  string[]) {
  * Used to lazily create initial layout state.
  */
 function init({ pathname, menuConfig }) {
-  console.log(pathname, menuConfig)
   const currentPage = pathname.slice(1 /* Remove leading slash. */);
   let breadcrumbs: string[] = [];
   const pageConfig =
@@ -99,9 +98,7 @@ function init({ pathname, menuConfig }) {
 }
 
 function reducer(state, { type, payload }) {
-  console.log(payload)
   if (type === actionTypes.INIT) {
-    // console.log(payload)
     const nextState = init(payload);
 
     // Update only subheader.
@@ -138,7 +135,6 @@ function reducer(state, { type, payload }) {
  * Creates layout reducer and provides it's `state` and ` dispatch`.
  */
 export function LayoutContextProvider({ history, children, menuConfig }) {
-  console.log(menuConfig, history )
   const [state, dispatch] = useReducer(reducer, {pathname: history.pathname, menuConfig: menuConfig.builder.MenuConfig},
       // See https://reactjs.org/docs/hooks-reference.html#lazy-initialization
       init

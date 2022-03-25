@@ -3,18 +3,34 @@
     padding: 20px 0;
     height: 100%;
 
+    &-table{
+        margin: 0 25px 0 0;
+        @media (max-width: 767px) {
+            margin: 10px 10px;
+        }
+    
+    }
+
     &-containers {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 0 0 30px;
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+            display: block;
+            margin: 20px 10px;
+        }
 
         &-wrapper {
-            margin: 0 10px 0 0;
+            margin: 0 25px 0 0;
             border-radius: 20px;
             flex: 1 65%;
             background-color: #FFFF;
-
+            @media (max-width: 767px) {
+                margin: 0;
+            }
+    
             &:nth-child(2){
                 flex: 1 35%;
 
@@ -22,14 +38,25 @@
         }
     }
     &-details{
-        padding: 40px;
+        padding: 25px 40px;
 
         &-header{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid #8e9499 ;
-            padding: 20px 0;
+            border-bottom:2px solid #e2e6e9 ;
+            padding:0 0 20px 0;
+            @media (max-width: 767px) {
+                display: block;
+                padding: 10px 0;
+
+            }
+            &-action{
+                @media (max-width: 767px) {
+                    padding: 10px 0;
+    
+                } 
+            }
             &-title{
                 display: flex;
                 justify-content: space-between;
@@ -50,12 +77,21 @@
             &-values{
                 display: flex;
                 justify-content: space-between;
+                @media (max-width: 767px) {
+                    display: block;
+        
+        
+                }
                 &-columns {
                     &:last-child {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
                         align-items: flex-end;
+                        @media (max-width: 767px) {
+                            align-items: flex-start;
+                            flex-direction: row;
+                        }
 
                     }
                     &-rows{

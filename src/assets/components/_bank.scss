@@ -1,0 +1,117 @@
+.bank {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0;
+
+    @media (max-width: 767px) {
+        display: flex;
+        height: auto;
+        padding: 20px 0;
+
+    }
+
+    &-wrapper {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        width: 60%;
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+
+        &-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media (max-width: 767px) {
+                display: block;
+            }
+
+            &-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+
+                h2 {
+                    margin-left: 10px;
+                }
+
+                span {
+                    border-radius: 50%;
+                    position: relative;
+
+                    i {
+                        color: #5cd2a1;
+                        position: absolute;
+                        left: 35%;
+                        bottom: -5px;
+                        font-size: 20px;
+                    }
+
+                    img {
+                        font-size: 50px;
+                        width: 60px;
+                        border: 1px solid #797c80a2;
+                        border-radius: 10px;
+                    }
+                }
+
+            }
+        }
+
+        &-viza {
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: 767px) {
+                display: block;
+            }
+
+            img {
+                width: 300px;
+            }
+        }
+
+        &-button.outlined {
+            background-color: #fff;
+            font-size: 20px;
+            font-weight: 800;
+            margin-top: 70px;
+            padding: 20px 25px;
+
+            i {
+                color: $primary;
+                font-size: 24px;
+                margin: 0 10px;
+
+            }
+        }
+
+        &-number {
+            display: block;
+            padding: 20px 0;
+
+            p {
+                &:first-child {
+                    font-weight: 500;
+                    font-size: 24px;
+                    color: $secondary;
+                }
+
+                &:last-child {
+                    color: #000;
+                    font-weight: 700;
+                    font-size: 28px;
+
+                }
+            }
+        }
+
+    }
+}

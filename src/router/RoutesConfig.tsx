@@ -3,6 +3,7 @@
 // import AuthPage from "../pages/auth/AuthPage";
 // import Dashboard from "../pages/home/Dashboard";
 import Layout from '../components/layout/Layout';
+import { Bank } from '../modules/bank/bank';
 import { Company } from '../modules/company/company';
 import { Dashboard } from '../modules/dashboard/dashboard';
 
@@ -36,7 +37,7 @@ export const publicRoutes = [
         path: '/',
         exact: true,
         // eslint-disable-next-line react/display-name
-        component: Dashboard,
+        component: Company,
         layout: Layout,
         roles: [
             '*',
@@ -53,9 +54,20 @@ export const publicRoutes = [
         ],
     },
     {
+        path: '/bank',
+        exact: true,
+        // eslint-disable-next-line react/display-name
+        component: Bank,
+        layout: Layout,
+        roles: [
+            '*',
+        ],
+    },
+    
+    {
         path: '/dashboard',
         exact: true,
-        component: '',
+        component: Company,
         layout: Layout,
         roles: [
             '*',

@@ -21,7 +21,7 @@ export default function LayoutInitializer({
   }, [dispatch, menuConfig]);
 
   useEffect(() => {
-    if (layoutConfig.demo !== builderState.layoutConfig.demo) {
+    if (layoutConfig.splyd !== builderState.layoutConfig.splyd) {
       dispatch(builder.actions.setLayoutConfigs(layoutConfig));
     }
   }, [dispatch, builderState, layoutConfig]);

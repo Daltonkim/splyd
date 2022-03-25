@@ -1,5 +1,5 @@
 export const initLayoutConfig = {
-  demo: "app",
+  splyd: "app",
   // == Page Splash Screen loading
   loader: {
     enabled: true,
@@ -26,6 +26,8 @@ export const initLayoutConfig = {
       shape: ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
     }
   },
+  // for a more dynamic menu
+  //TODO
   header: {
     self: {
       width: "fixed",

@@ -1,14 +1,29 @@
 .usertable {
     background-color: #fff;
     border-radius: 20px;
-    padding: 40px;
+    padding: 0 40px 40px 40px;
+    @media (max-width: 767px) {
+        padding: 0 45px 40px 40px;
+
+    }
+
 
     &-header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
     }
 
     &-actions {
+        i{
+            color: #fff;
+            font-size: 16px;
+            margin-right: 10px;
+            @media (max-width: 767px) {
+                font-size: 10px;
+            }
+        }
         &-buttons {
             display: flex;
             justify-content: start;
@@ -28,6 +43,9 @@
                     margin: auto;
                     color: #797c80;
                     font-size: 18px;
+                    @media (max-width: 767px) {
+                        font-size: 10px;
+                    }
                 }
             }
         }

@@ -12,6 +12,7 @@ export const Header = () => {
                 <Dropdown icon='far fa-bell' />
                 <Dropdown icon='fas fa-cog' />
                 <Dropdown icon='far fa-user' />
+                <Dropdown icon='fas fa-bars' />
             </div>
         </div>
     )

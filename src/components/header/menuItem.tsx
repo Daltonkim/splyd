@@ -14,13 +14,11 @@ export const MenuItem = injectIntl((props: any) => {
 
     useEffect(() => {
         const url = location.pathname.split('/')[1];
-        console.log(url)
         if(url === page){
             setActive(true)
         }else{
             setActive(false)
         }
-        console.log(location.pathname.split('/')[0], page)
     }, [location, page])
 
     return (

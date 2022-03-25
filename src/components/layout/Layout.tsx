@@ -11,7 +11,7 @@ import { MenuConfig } from "./MenuConfig";
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Search } from "../search/search";
 import { useLocation } from 'react-router-dom';
-import { useEffect,useState  } from 'react';
+import { useEffect, useState } from 'react';
 
 function Layout({
   children,
@@ -23,27 +23,25 @@ function Layout({
   contentContainerClasses,
   contentClasses
 }) {
-const [searchDisplay, setSearchDisplay] = useState(true)
+  const [searchDisplay, setSearchDisplay] = useState(true)
 
   const perfectScrollbarOptions = {
     wheelSpeed: 2,
     wheelPropagation: false
   }
-  console.log(useLocation())
   const location = useLocation();
 
   useEffect(() => {
-   if(location.pathname === '/company'){
-     setSearchDisplay(false)
-   }else{
-    setSearchDisplay(true)
-   }
+    if (location.pathname === '/company' || location.pathname === '/bank' ) {
+      setSearchDisplay(false)
+    } else {
+      setSearchDisplay(true)
+    }
   }, [location])
-  
+
 
   // scroll to top after location changes
   window.scrollTo(0, 0);
-  console.log(subheaderDisplay)
   return (
     <LayoutInitializer
       menuConfig={MenuConfig}
@@ -62,16 +60,17 @@ const [searchDisplay, setSearchDisplay] = useState(true)
             <PerfectScrollbar
               options={perfectScrollbarOptions}
               className="scroll pr-7 mr-n7"
-              style={{ maxHeight: '83vh', position: 'relative' }}
+              style={{ maxHeight: '85vh', position: 'relative' }}
             >
               {searchDisplay && <Search />}
 
               {children}
+
+              <div className="footer">
+                © 2022 <span>SPLYD</span>. All rights reserved
+              </div>
             </PerfectScrollbar>
 
-          </div>
-          <div className="footer">
-          © 2022 <span>SPLYD</span>. All rights reserved
           </div>
         </div>
 

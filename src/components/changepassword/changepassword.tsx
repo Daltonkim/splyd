@@ -1,7 +1,9 @@
 export const ChangePassword = () => {
     return (
         <div className="changepassword">
-            <div className="changepassword-title">Change Password</div>
+            <div className="changepassword-title">
+                <h2>Change Password</h2>
+                </div>
             <div className="changepassword-inputs">
                 <input placeholder="Current Password"></input>
                 <input placeholder="New Password"></input>

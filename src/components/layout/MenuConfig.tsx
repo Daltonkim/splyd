@@ -75,57 +75,7 @@ export const MenuConfig = {
   aside: {
     self: {},
     items: [
-      {
-        title: "Dashboard",
-        root: true,
-        icon: "fas fa-columns",
-        page: "dashboard",
-        translate: "MENU.DASHBOARD",
-        bullet: "dot"
-      },
-      {
-        title: "Layout Builder",
-        root: true,
-        icon: "fa-solid fa-table-columns",
-        page: "builder"
-      },
-      { section: "Components" },
-      {
-        title: "Material UI",
-        root: true,
-        bullet: "dot",
-        icon: "fa-solid fa-table-columns",
-        page: "google-material",
-        submenu: [
-          {
-            title: "Layout",
-            bullet: "dot",
-            page: "google-material/layout/box",
-            submenu: [
-              {
-                title: "Box",
-                page: "google-material/layout/box"
-              },
-              {
-                title: "Container",
-                page: "google-material/layout/container"
-              },
-              {
-                title: "Grid",
-                page: "google-material/layout/grid"
-              },
-              {
-                title: "Grid list",
-                page: "google-material/layout/grid-list"
-              },
-              {
-                title: "Hidden",
-                page: "google-material/layout/hidden"
-              }
-            ]
-          },
-        ]
-      },      
+           
     ]
   }
 };

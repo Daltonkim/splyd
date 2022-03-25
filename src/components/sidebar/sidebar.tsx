@@ -27,7 +27,6 @@ export const SideBar = () => {
                     className="scroll pr-7 mr-n7"
                     style={{ maxHeight: '85vh', position: 'relative' }}
                 >
-                    {console.log(items)}
                     {items.map(menu => (
                         <MenuItem key={menu.page} build={menu}/>
                     ))}
