@@ -1,0 +1,54 @@
+.contact {
+    background-color: #1e2a34;
+    padding: 10px;
+    display: block;
+    margin: 50px 40px;
+    border-radius: 20px;
+
+    &-title {
+        font-size: 24px;
+        color: #fff;
+        padding: 20px 0 0 20px;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    &-inputs {
+        padding: 20px;
+
+        input {
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.301);
+            font-size: 14px;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin: 10px 0;
+            color: #fff;
+            width: 100%;
+
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.301);
+                font-size: 16px;
+            }
+        }
+
+    }
+
+    &-submit {
+        display: flex;
+        justify-content: space-between;
+
+        &-input {
+            width: 70%;
+        }
+
+        &-button {
+            width: 30%;
+            margin: auto;
+            text-align: end;
+        }
+
+    }
+}

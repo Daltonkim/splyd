@@ -1,0 +1,22 @@
+.dropdwon-wrapper{
+    position: absolute;
+    background-color: #fff;
+    display: block;
+}
+
+
+.dropdown{
+    margin: 0 10px 0  0;
+    cursor: pointer;
+    i{
+        font-size: 22px;
+        color: #797c80;
+    }
+}
+.dropdown-toggle{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+
+   
+}

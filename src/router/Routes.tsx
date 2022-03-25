@@ -17,11 +17,12 @@ import { useLastLocation } from "react-router-last-location";
 export const Routes = () => {
 
 const location =  useLocation();
-console.log(location)
+// const nav = useNavigate()
+console.log(location, )
 
     // const lastLocation = useLastLocation();
 // console.log(lastLocation)
-    // routerHelpers.saveLastLocation(lastLocation);
+    routerHelpers.saveLastLocation('asdas');
     const { menuConfig, userLastLocation } = useSelector(
         (menuConfig: DefaultRootState) => ({
             menuConfig,

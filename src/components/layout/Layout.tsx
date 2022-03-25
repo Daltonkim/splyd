@@ -8,6 +8,10 @@ import LayoutInitializer from "./LayoutInitializer";
 import { SideBar } from "../sidebar/sidebar";
 import { Header } from "../header/header";
 import { MenuConfig } from "./MenuConfig";
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import { Search } from "../search/search";
+import { useLocation } from 'react-router-dom';
+import { useEffect,useState  } from 'react';
 
 function Layout({
   children,
@@ -19,52 +23,60 @@ function Layout({
   contentContainerClasses,
   contentClasses
 }) {
+const [searchDisplay, setSearchDisplay] = useState(true)
+
+  const perfectScrollbarOptions = {
+    wheelSpeed: 2,
+    wheelPropagation: false
+  }
+  console.log(useLocation())
+  const location = useLocation();
+
+  useEffect(() => {
+   if(location.pathname === '/company'){
+     setSearchDisplay(false)
+   }else{
+    setSearchDisplay(true)
+   }
+  }, [location])
+  
+
   // scroll to top after location changes
   window.scrollTo(0, 0);
+  console.log(subheaderDisplay)
   return (
     <LayoutInitializer
       menuConfig={MenuConfig}
       layoutConfig={LayoutConfig}
-      htmlClassService={undefined}    >
+      htmlClassService={undefined}>
       {/* <!-- begin:: Header Mobile --> */}
       {/* <!-- end:: Header Mobile --> */}
 
       <div className="container">
-        <div className="">
-          <div
-            className=""
-            id="wrapper"
-          >
-            {/* <!-- begin:: Header READY --> */}
-
+        <div className="container-column">
+          <SideBar />
+        </div>
+        <div className="container-column">
+          <div className="container-column-inner">
             <Header />
-            {/* <!-- end:: Header --> */}
-
-            {/* <!-- begin:: Content --> */}
-            <div
-              className="body-page"
-              id="body"
+            <PerfectScrollbar
+              options={perfectScrollbarOptions}
+              className="scroll pr-7 mr-n7"
+              style={{ maxHeight: '83vh', position: 'relative' }}
             >
-              <div
-                className=''
-              >
-                <SideBar />
-                <div
-                  className=''
-                >
-                  {subheaderDisplay && <>SEARCH</>}
-                    { children }
-                </div>
-              </div>
-              {/*<!-- end:: Content Body -->*/}
-            </div>
-            {/* <!-- end:: Content --> */}
+              {searchDisplay && <Search />}
 
-            {/* <Footer /> */}
+              {children}
+            </PerfectScrollbar>
+
+          </div>
+          <div className="footer">
+          © 2022 <span>SPLYD</span>. All rights reserved
           </div>
         </div>
-        {/* <!-- end:: Body --> */}
+
       </div>
+
       {/* <ScrollTop />
       <QuickPanel /> */}
     </LayoutInitializer>

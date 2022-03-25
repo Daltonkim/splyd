@@ -1,0 +1,23 @@
+.header {
+    width: 100%;
+    padding: 0 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2e6e9;
+
+    &-name {
+        
+        h1 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+    &-quicklinks{
+        display: flex;
+        justify-content:right;
+    }
+}
