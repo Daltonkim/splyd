@@ -1,18 +1,10 @@
-/**
- * High level router.
- *
- * Note: It's recommended to compose related routes in internal router
- * components (e.g: `src/pages/auth/AuthPage`, `src/pages/home/HomePage`).
- */
 import React, { Suspense } from "react";
 import { DefaultRootState, shallowEqual, useSelector } from "react-redux";
-// import { useLastLocation } from "react-router-last-location";
 import * as routerHelpers from "./RouterHelpers";
 import { publicRoutes } from './RoutesConfig';
 import { LayoutContextProvider, LayoutSplashScreen } from "../components";
 import Layout from "../components/layout/Layout";
-import { Route, Navigate, Routes as MadeRoutes, useLocation, useNavigate } from 'react-router-dom';
-import { useLastLocation } from "react-router-last-location";
+import { Route, Routes as MadeRoutes, useLocation } from 'react-router-dom';
 
 export const Routes = () => {
 
@@ -23,7 +15,7 @@ console.log(location, )
     // const lastLocation = useLastLocation();
 // console.log(lastLocation)
     routerHelpers.saveLastLocation('asdas');
-    const { menuConfig, userLastLocation } = useSelector(
+    const { menuConfig } = useSelector(
         (menuConfig: DefaultRootState) => ({
             menuConfig,
             userLastLocation: routerHelpers.getLastLocation()
